@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <title>Loyalty</title>
+    <!--CSS link-->
+    <link rel="stylesheet" href="./style.css">
+    <!--Bootstrap css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Font Awesome link-->
+    <script src="https://kit.fontawesome.com/fdaa094f6e.js" crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+
+    <!--Data table link-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!--jquery cdn-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  </head>
+
+<body>
+  <!--Navbar section starts-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand text-light" href="#">
+        <h2>Loyalty</h2>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active text-light" aria-current="page" href="./dashboard.html">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="#">Reports</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarlightDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Customers
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="./customers.html">Customer List</a></li>
+              <li><a class="dropdown-item" href="./add_customer.html">Add Customers</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="./groups.html">Groups</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarlightDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Rewards
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item" href="./rewards.html">Manage Point Rewards</a></li>
+              <li><a class="dropdown-item" href="./rewards-2.html">Manage One-Time Rewards</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="./compaigns.html">Campaigns</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarlightDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Content
+            </a>
+
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-light" href="#" id="navbarlightDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Marketing
+            </a>
+
+          </li>
+
+        </ul>
+        <span class="admin" href="#">Hi, Admin</span>
+      </div>
+
+    </div>
+        <div class="row campaigns-title text-light">
+            <h6>Campaigns </h6> </div>
+            <div class="campaigns-heading text-light">
+              <h6>Manage Campaigns</h6>
+
+            </div>
+       
+    </nav>
+
+    <!--Navbar section ends-->
+
+
+    <!--Manage group section starts-->
+    <section class="add-customer-section">
+        <div class="container-fluid m-0 p-0">
+            <div class="bg-1">
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-12 col-sm-12">
+                        <div class="bg-box-compaigns">
+                            <div class="compaigns-content m-3">
+
+                                <h5 class="pay-earn">Pay + Earn</h5>
+                                <p class="pay-text">This Campaign allows customers to earn points by making purchases.
+                                </p>
+                                <h5 class="dollar">Points Per Dollers</h5>
+                                <input type="text" class="value-box mb-3" value="1.0">
+                                <h5 class="points">Assign Points On</h5>
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Subtotal" class="radio-title">Invoice Subtotal</label>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Total Including Tax" class="radio-title mb-3">Invoice Total
+                                    Including Tax</label>
+                                <h5 class="products">Excluded Products</h5>
+                                <input type="text" class="value-box mb-3" value="Manage"> <br>
+                                <button type="button" class="save text-light">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-12 col-sm-12">
+                        <div class="bg-box-compaigns">
+                            <div class="compaigns-content m-3">
+
+                                <h5 class="pay-earn">Pay + Earn</h5>
+                                <p class="pay-text">This Campaign allows customers to earn points by making purchases.
+                                </p>
+                                <h5 class="dollar">Points Per Dollers</h5>
+                                <input type="text" class="value-box mb-3" value="1.0">
+                                <h5 class="points">Assign Points On</h5>
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Subtotal" class="radio-title">Invoice Subtotal</label>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Total Including Tax" class="radio-title mb-3">Invoice Total
+                                    Including Tax</label>
+                                <h5 class="products">Excluded Products</h5>
+                                <input type="text" class="value-box mb-3" value="Manage"> <br>
+                                <button type="button" class="save text-light">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-12 col-sm-12">
+                        <div class="bg-box-compaigns">
+                            <div class="compaigns-content m-3">
+
+                                <h5 class="pay-earn">Pay + Earn</h5>
+                                <p class="pay-text">This Campaign allows customers to earn points by making purchases.
+                                </p>
+                                <h5 class="dollar">Points Per Dollers</h5>
+                                <input type="text" class="value-box mb-3" value="1.0">
+                                <h5 class="points">Assign Points On</h5>
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Subtotal" class="radio-title">Invoice Subtotal</label>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Total Including Tax" class="radio-title mb-3">Invoice Total
+                                    Including Tax</label>
+                                <h5 class="products">Excluded Products</h5>
+                                <input type="text" class="value-box mb-3" value="Manage"> <br>
+                                <button type="button" class="save text-light">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 col-xl-6 col-xxl-6 col-md-12 col-sm-12">
+                        <div class="bg-box-compaigns">
+                            <div class="compaigns-content m-3">
+
+                                <h5 class="pay-earn">Pay + Earn</h5>
+                                <p class="pay-text">This Campaign allows customers to earn points by making purchases.
+                                </p>
+                                <h5 class="dollar">Points Per Dollers</h5>
+                                <input type="text" class="value-box mb-3" value="1.0">
+                                <h5 class="points">Assign Points On</h5>
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Subtotal" class="radio-title">Invoice Subtotal</label>
+                                &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="invoice" id="invoice" value="Invoice Subtotal">
+                                <label for="Invoice Total Including Tax" class="radio-title mb-3">Invoice Total
+                                    Including Tax</label>
+                                <h5 class="products">Excluded Products</h5>
+                                <input type="text" class="value-box mb-3" value="Manage"> <br>
+                                <button type="button" class="save text-light">Save</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        <!--Manage group section ends-->
+        <!--footer section starts-->
+        <section class="footer-section mt-4">
+            <div class="container">
+                <p class="footer-content">© 2022 Shift Management App</p>
+            </div>
+        </section>
+        <!--footer section ends-->
+
+</body>
+
+</html>
